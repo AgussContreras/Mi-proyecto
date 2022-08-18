@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* fuentes */
+@font-face {
+    font-family: story;
+    src: url(../fonts/little-story.ttf);
+}
+@font-face {
+    font-family: caviar;
+    src: url(../fonts/caviardreams-boldItalic.ttf);
+}
+/*fin de fuentes*/
+
+/*listas*/
+li {
+    padding-left: 20px;
+}
+/*body*/
+body {
+    background-color: #f6f3c2;
+}
+/* titulos */
+h2 {
+    font-family: caviar;
+    margin-bottom: 20px;
+}
+h3{
+    margin-bottom: 10px;
+}
+
+/*menu*/
+
+header{
+    background-color: #f7c69f;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: solid 10px #f89b7e;
+    margin-bottom: 50px;
+    display: flex;
+   justify-content: center;
+}
+
+.menu {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    font-family: caviar;
+    list-style: none;
+    display: inline-flex;
+}
+
+/* links */
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+b{
+    margin-left: 10px;
+}
+
+/* pagina de premios */
+
+.premios {
+    list-style: circle;
+    margin-bottom: 20px;
+}
+ 
+.fotos-galeria{
+    width: 500px;
+    padding: 10px;
+}
+
+/* .galeria{
+    display: grid;
+    grid-template-columns: 500px ;
+    grid-template-rows: 500px;
+} */
+ .galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(2, 400px);
+} 
+/* pagina de shows */
+.ticket{
+    color: #f89b7e;
+    background-color: #f7c69f;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.shows{
+    display: grid;
+    grid-template-rows: 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px;
+}
+/* pagina principal */
+.biografia{
+    display: grid;
+    grid-template-columns: 900px 500px;
+    column-gap: 10px;
+}
+.texto{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.foto{
+    width: 500px;
+    
+}
+/* pagina de tienda */
+.productos{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+/* footer */
+footer {
+    margin-top: 100px;
+    background-color: #f7c69f;
+    padding: 30px;
+    border: solid #f89b7e 5px;
+}
+
+@media screen and (max-width: 768px){
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Barra de navegacion */
+    header{
+    background-color: #f7c69f;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border: solid 10px #f89b7e;
+    margin-bottom: 50px;
+    display: flex;
+   justify-content: center;
+   } 
+   a{
+        font-size: 20px;
+        padding-right: 4px;
+    }
+   .logo{
+        width: 200px;
+        padding-top: 30px
+    }
+    /* Titulos */
+   h2{
+        display: flex;
+        justify-content: center;
+       }
+   /* inicio */
+   .texto{
+        display: flex;
+        font-size: 15px;  
+   }
+   .foto{
+        display: flex;
+        width: 400px;
+        margin-left: 25px;
+        padding-top: 20px;
+   }
+   .biografia{
+        display: grid;
+        grid-template-columns: repeat(1, 450px);
+        padding-left: 15px;
+   }
+   /* Pagina de premios */
+   .galeria{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+   }
+   .fotos-galeria{
+        width: 480px;
+   }
+   /* Pagina de tienda */
+   .productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+   }
+   .img-productos{
+    display: flex;
+    width: 300px;
+    margin-left: 80px
+   }
+   /* Pagina de shows */
+   .ticket{
+    font-size: 10px
+   }
+    .shows{
+        display: grid;
+        grid-template-rows: repeat(16, 40px)
+    }
+    b{
+        font-size: 11px
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+        font-size: 15px
+    }
+    /* Pagina de discografia */
+    .albums{
+        display: grid;
+        grid-template-columns: 1450px;
+        grid-gap: 20px;
+    }
+   /* Footer */
+   footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        background-color: #f7c69f;
+        padding: 30px;
+        border: solid #f89b7e 5px;
+}
+    }
+
+@media screen and (max-width: 480px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+     /* Barra de navegacion */
+     header{
+        background-color: #f7c69f;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        border: solid 10px #f89b7e;
+        margin-bottom: 50px;
+        display: flex;
+       justify-content: center;
+       } 
+       a{
+            font-size: 10px;
+            padding-right: 8px;
+        }
+       .logo{
+            width: 200px;
+            padding-top: 30px
+        }
+        /* Titulos */
+       h2{
+            display: flex;
+            justify-content: center;
+           }
+       /* inicio */
+       .texto{
+           display: flex;
+           font-size: 12px;
+           margin-right: 150px;
+           padding-right: 10px;
+        }
+       .foto{
+        display: flex;
+        width: 200px;
+        margin-left: 45px;
+        padding-top: 20px;
+        }
+        .biografia{
+        display: grid;
+        grid-template-columns: repeat(1, 450px);
+        padding-left: 15px;
+        }
+       /* Pagina de premios */
+       .galeria{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+       }
+       .fotos-galeria{
+            width: 320px;
+       }
+       /* Pagina de tienda */
+       .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+       }
+       .img-productos{
+        display: flex;
+        width: 200px;
+        margin-left: 50px
+       }
+       /* Pagina de shows */
+       .ticket{
+        font-size: 10px
+       }
+        .shows{
+            display: grid;
+            grid-template-rows: repeat(16, 40px)
+        }
+        b{
+            font-size: 11px
+        }
+        h3{
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+            margin: 20px;
+        }
+        /* Pagina de discografia */
+        .albums{
+            display: grid;
+            grid-template-columns: 970px;
+            grid-gap: 20px;
+        }
+       /* Footer */
+       footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            background-color: #f7c69f;
+            padding: 30px;
+            border: solid #f89b7e 5px;
+    }
+
+}
+    
