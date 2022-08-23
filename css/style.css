@@ -59,6 +59,14 @@ header {
     display: inline-flex;
 }
 
+.nav-item{
+    transition: 1s;
+}
+
+.nav-item:hover{
+    scale: 1.1;
+}
+
 /* links */
 
 a {
