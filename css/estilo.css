@@ -1,16 +1,67 @@
+@font-face {
+  font-family: story;
+  src: url(../fonts/little-story.ttf); }
+
+@font-face {
+  font-family: caviar;
+  src: url(../fonts/caviardreams-boldItalic.ttf); }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+header {
+  background-color: #536d88;
+  opacity: 0.7;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-left: 20px; }
+
+.encabezado {
+  margin-bottom: 30px; }
+
+.menu {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  font-family: "caviar";
+  list-style: none;
+  display: inline-flex; }
+
+.nav-item {
+  transition: 1s; }
+
+li {
+  padding-left: 20px; }
+
+.nav-item:hover {
+  scale: 1.1; }
+
+body {
+  background: linear-gradient(#19274e, #536d88); }
+
+h1 {
+  font-family: "story"; }
+
+h2 {
+  font-family: "story"; }
+
+h3 {
+  font-family: "story"; }
+
+/* Shows */
 ul {
   list-style: none; }
-  ul li {
+  ul .lista {
     margin: 10px; }
-    ul li b {
+    ul .lista b {
       background-color: #19274e;
-      opacity: 0.5; }
-    ul li .ticket {
+      opacity: 0.5;
+      font-family: "caviar"; }
+    ul .lista .ticket {
       text-decoration: none;
       color: #c5cef2;
       background-color: #5c627a;
@@ -18,28 +69,194 @@ ul {
       border-radius: 5px;
       transition: background-color 1s;
       margin-left: 10px; }
-    ul li .ticket:hover {
+    ul .lista .ticket:hover {
       background-color: #404467;
       color: #707497; }
 
-body {
+.lista-1 {
+  background-color: #536d88;
+  opacity: 0,5;
+  font-family: "caviar";
+  opacity: 0,5; }
+
+.lista-2 {
+  background-color: #19274e;
+  opacity: 0,5;
+  font-family: "caviar";
+  opacity: 0,5; }
+
+.pag-shows {
   background-image: url(../img/fondo-6.jpg);
-  background-size: 100%;
-  background-position: 10%;
+  background-position: center;
+  background-size: 160%;
   background-repeat: no-repeat; }
 
-header {
-  background-color: #536d88;
-  opacity: 0.7;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: center; }
+/* pagina de tienda */
+.firma {
+  width: 20%;
+  margin-top: 20px; }
 
+.dua-lipa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+
+.productos {
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 500px 500px 500px 500px;
+  row-gap: 10px;
+  column-gap: 10px; }
+
+.ropa {
+  opacity: 0.8;
+  transition: all 1s; }
+
+.ropa:hover {
+  transform: scale(1.1);
+  opacity: 1; }
+
+/* pagina principal */
+.biografia {
+  background-image: url(../img/fondo.jpg);
+  background-size: 100%;
+  background-position: 10%;
+  opacity: 0.5;
+  background-repeat: no-repeat; }
+  .biografia p {
+    font-size: 20px;
+    padding: 40px;
+    color: white;
+    font-family: "caviar"; }
+
+/* pagina de premios */
+.premios {
+  list-style: circle;
+  margin-bottom: 20px;
+  font-family: "caviar"; }
+
+.fotos-galeria {
+  width: 500px;
+  padding: 10px; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  grid-template-rows: repeat(2, 350px);
+  margin-bottom: 200px; }
+
+/* pagina de discografia */
+.titulo-discos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c5cef2;
+  padding-bottom: 10px; }
+
+.spootify {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* footer */
 footer {
   background-color: #536d88;
   padding: 30px;
   border: solid #19274e 5px;
+  transition: all 1s;
   display: flex;
-  align-items: flex-end; 
-}
+  align-items: center;
+  justify-content: center; }
+
+.redes-logos {
+  padding: 10px; }
+
+@media (max-width: 1072px) {
+  .biografia {
+    background: url(../img/fondo.jpg);
+    opacity: 0.5;
+    background-position: center;
+    background-size: 160%;
+    background-repeat: no-repeat; }
+  .productos {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 500px 500px 500px 500px 500px;
+    row-gap: 10px;
+    column-gap: 10px; }
+  .pag-shows {
+    background-image: url(../img/fondo-6.jpg);
+    background-position: center;
+    background-size: 200%;
+    background-repeat: no-repeat; }
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 280px; }
+  .fotos-galeria {
+    width: 340px; } }
+
+@media (max-width: 848px) {
+  .biografia {
+    background: url(../img/fondo.jpg);
+    opacity: 0.5;
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .pag-shows {
+    background: linear-gradient(#19274e, #536d88); }
+  .albums {
+    display: grid;
+    grid-template-columns: 1450px;
+    grid-gap: 20px; }
+  .canciones {
+    width: 800px; } }
+
+@media (max-width: 768px) {
+  .productos {
+    display: grid;
+    grid-template-columns: 600px;
+    grid-template-rows: 500px 500px 500px 500px 500px;
+    row-gap: 10px;
+    column-gap: 10px; }
+  .firma {
+    width: 30%;
+    margin-top: 20px; }
+  .canciones {
+    width: 700px; }
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px; }
+  .biografia {
+    background: linear-gradient(#19274e, #536d88); }
+  .fotos-galeria {
+    width: 250px; }
+  p {
+    font-size: 13px; } }
+
+@media (max-width: 481px) {
+  .canciones {
+    width: 480px; }
+  .firma {
+    width: 40%;
+    margin-top: 20px; }
+  p {
+    font-size: 8px; }
+  .shows {
+    font-size: 12px; }
+  .premios-grammy {
+    font-size: 15px; }
+  .galeria1 {
+    font-size: 15px; }
+  .premios {
+    font-size: 10px; }
+  .titulo-discos {
+    font-size: 20px; }
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px; }
+  .fotos-galeria {
+    width: 480px; } }

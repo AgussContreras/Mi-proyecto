@@ -1,19 +1,79 @@
+@import "colors";
+@import "displays";
+@import "scales";
+@import "fonts";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+header {
+    background-color: $color-1;
+    opacity: 0.7;
+    padding-bottom: $p-b;
+    display: $df;
+    justify-content: $f-c;
+    padding-top: $p-t;
+    padding-left: $p-l;
+}
+
+.encabezado {
+    margin-bottom: 30px;
+}
+
+.menu {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    font-family: $font1;
+    list-style: none;
+    display: $if;
+}
+
+.nav-item {
+    transition: 1s;
+}
+
+li{
+    padding-left: $p-l;
+}
+
+.nav-item:hover {
+    scale: 1.1;
+}
+
+
+body {
+    background: linear-gradient($color-2, $color-1);
+}
+
+h1{
+    font-family: $font2;
+}
+
+h2{
+    font-family: $font2;
+}
+
+h3{
+    font-family: $font2;
+}
+/* Shows */
 
 ul{
     list-style: none;
 
-    li{
+    .lista{
         margin: 10px;
+
         b{
-            background-color: #19274e;
+            background-color: $color-2;
             opacity: 0.5;
+            font-family: $font1;
         }
+
         .ticket{
             text-decoration: none;
             color: #c5cef2;
@@ -23,6 +83,7 @@ ul{
             transition: background-color 1s;
             margin-left: 10px;
           }
+
           .ticket:hover {
             background-color: #404467;
             color: #707497;
@@ -31,28 +92,259 @@ ul{
         
 }
 
-body{
+$listas: (
+    1: #536d88,
+    2: #19274e
+);
+
+@each $fondolistas, $colorlista in $listas {
+    .lista-#{$fondolistas} {
+        background-color: $colorlista;
+        opacity: 0,5;
+        font-family: $font1;
+        opacity: 0,5;
+    }
+}
+
+.pag-shows{
     background-image: url(../img/fondo-6.jpg);
-    background-size: 100%;
-    background-position: 10%;
+    background-position: center;
+    background-size: 160%;
     background-repeat: no-repeat;
 }
 
-header {
-    background-color: $color-1;
-    opacity: 0.7;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
+
+/* pagina de tienda */
+
+.firma {
+    width: 20%;
+    margin-top: 20px;
 }
 
+.dua-lipa{
+    display: $df;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.productos {
+    display: $dg;
+    grid-template-columns: $xxl $xxl $xxl;
+    grid-template-rows: $xxl $xxl $xxl $xxl;
+    row-gap: 10px;
+    column-gap: 10px;
+
+}
+
+ .ropa {
+     opacity: 0.8;
+     transition: all 1s;
+ }
+
+ .ropa:hover {
+     transform: scale(1.1);
+     opacity: 1;
+ }
+
+/* pagina principal */
+
+
+
+.biografia {
+    background-image: url(../img/fondo.jpg);
+    background-size: 100%;
+    background-position: 10%;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+
+        p{
+          font-size: 20px;
+          padding: 40px;
+          color: white;
+          font-family: $font1;
+        }
+}
+
+/* pagina de premios */
+
+.premios {
+    list-style: circle;
+    margin-bottom: 20px;
+    font-family: $font1;
+}
+
+.fotos-galeria {
+    width: 500px;
+    padding: 10px;
+}
+
+.galeria {
+    display: $dg;
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(2, 350px);
+    margin-bottom: 200px;
+    
+}
+
+/* pagina de discografia */
+
+.titulo-discos{
+    display: $df;
+    justify-content: center;
+    align-items: center;
+    color: #c5cef2;
+    padding-bottom: 10px;
+}
+
+.spootify{
+    display: $df;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+
 footer {
-    background-color: #536d88;
+    background-color: $color-1;
     padding: 30px;
     border: $border;
     transition: all 1s;
-    display: flex;
-    align-items: flex-end;
+    display: $df;
+    align-items: $f-c;
+    justify-content: $f-c;
 }
+.redes-logos{
+    padding: 10px;
+}
+$vista: mobile;
+    
+@if $vista == mobile {
+     @media (max-width:1072px){
+        .biografia{
+            background:url(../img/fondo.jpg);
+            opacity: 0.5;
+            background-position: center;
+            background-size: 160%;
+            background-repeat: no-repeat;
+        }
+        .productos {
+            display: $dg;
+            grid-template-columns: $xxl $xxl ;
+            grid-template-rows: $xxl $xxl $xxl $xxl $xxl;
+            row-gap: 10px;
+            column-gap: 10px;
+        
+        }
 
+        .pag-shows{
+            background-image: url(../img/fondo-6.jpg);
+            background-position: center;
+            background-size: 200%;
+            background-repeat: no-repeat;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 280px;
+        }
+    
+        .fotos-galeria {
+            width: 340px;
+        }
+
+    }
+
+@if $vista == mobile {
+    @media (max-width:848px){
+       .biografia{
+           background:url(../img/fondo.jpg);
+           opacity: 0.5;
+           background-size: 200%;
+           background-position: center;
+           background-repeat: no-repeat;
+       }
+       .pag-shows{
+        background: linear-gradient($color-2, $color-1);
+       }
+       .albums {
+        display: grid;
+        grid-template-columns: 1450px;
+        grid-gap: 20px;
+      }
+       .canciones{
+        width: 800px;
+      }
+
+    }
+}}
+@if $vista == mobile {
+    @media (max-width:768px){
+        .productos {
+            display: $dg;
+            grid-template-columns: 600px;
+            grid-template-rows: $xxl $xxl $xxl $xxl $xxl;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        .firma {
+            width: 30%;
+            margin-top: 20px;
+        }
+        .canciones{
+            width: 700px;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px;
+        }
+        .biografia{
+            background: linear-gradient($color-2, $color-1);
+        }
+        .fotos-galeria {
+            width: 250px;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+}
+@if $vista == mobile {
+    @media (max-width:481px){
+        .canciones{
+            width: 480px;
+          }
+        .firma {
+            width: 40%;
+            margin-top: 20px;
+        }
+        p{
+            font-size: 8px;
+        }
+        .shows{
+            font-size: 12px;
+        }
+        .premios-grammy{
+            font-size: 15px;
+        }
+        .galeria1{
+            font-size: 15px;
+        }
+        .premios{
+            font-size: 10px;
+        }
+        .titulo-discos{
+            font-size: 20px;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 240px;
+        }
+        .fotos-galeria {
+            width: 480px;
+        }
+    }
+}
