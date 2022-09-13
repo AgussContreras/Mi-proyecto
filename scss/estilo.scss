@@ -67,14 +67,13 @@ ul{
 
     .lista{
         margin: 10px;
-
         b{
             background-color: $color-2;
             opacity: 0.5;
             font-family: $font1;
         }
-
-        .ticket{
+    }
+    .ticket{
             text-decoration: none;
             color: #c5cef2;
             background-color: #5c627a;
@@ -84,27 +83,27 @@ ul{
             margin-left: 10px;
           }
 
-          .ticket:hover {
+        .ticket:hover {
             background-color: #404467;
             color: #707497;
         }
-    }
+    
         
 }
 
-$listas: (
-    1: #536d88,
-    2: #19274e
-);
+// $listas: (
+//     1: #536d88,
+//     2: #19274e
+// );
 
-@each $fondolistas, $colorlista in $listas {
-    .lista-#{$fondolistas} {
-        background-color: $colorlista;
-        opacity: 0,5;
-        font-family: $font1;
-        opacity: 0,5;
-    }
-}
+// @each $fondolistas, $colorlista in $listas {
+//     .lista-#{$fondolistas} {
+//         background-color: $colorlista;
+//         opacity: 0,5;
+//         font-family: $font1;
+//         opacity: 0,5;
+//         }
+// }
 
 .pag-shows{
     background-image: url(../img/fondo-6.jpg);
@@ -206,15 +205,21 @@ $listas: (
 
 /* footer */
 
-footer {
+.footer2 {
     background-color: $color-1;
-    padding: 30px;
-    border: $border;
+    padding: 10px;
     transition: all 1s;
     display: $df;
     align-items: $f-c;
     justify-content: $f-c;
 }
+.footer1{
+    background-color: $color-1;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
 .redes-logos{
     padding: 10px;
 }

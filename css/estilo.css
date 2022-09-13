@@ -61,29 +61,17 @@ ul {
       background-color: #19274e;
       opacity: 0.5;
       font-family: "caviar"; }
-    ul .lista .ticket {
-      text-decoration: none;
-      color: #c5cef2;
-      background-color: #5c627a;
-      padding: 3px 5px;
-      border-radius: 5px;
-      transition: background-color 1s;
-      margin-left: 10px; }
-    ul .lista .ticket:hover {
-      background-color: #404467;
-      color: #707497; }
-
-.lista-1 {
-  background-color: #536d88;
-  opacity: 0,5;
-  font-family: "caviar";
-  opacity: 0,5; }
-
-.lista-2 {
-  background-color: #19274e;
-  opacity: 0,5;
-  font-family: "caviar";
-  opacity: 0,5; }
+  ul .ticket {
+    text-decoration: none;
+    color: #c5cef2;
+    background-color: #5c627a;
+    padding: 3px 5px;
+    border-radius: 5px;
+    transition: background-color 1s;
+    margin-left: 10px; }
+  ul .ticket:hover {
+    background-color: #404467;
+    color: #707497; }
 
 .pag-shows {
   background-image: url(../img/fondo-6.jpg);
@@ -160,14 +148,19 @@ ul {
   align-items: center; }
 
 /* footer */
-footer {
+.footer2 {
   background-color: #536d88;
-  padding: 30px;
-  border: solid #19274e 5px;
+  padding: 10px;
   transition: all 1s;
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.footer1 {
+  background-color: #536d88;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px; }
 
 .redes-logos {
   padding: 10px; }
