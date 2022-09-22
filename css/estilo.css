@@ -41,7 +41,10 @@ li {
   scale: 1.1; }
 
 body {
-  background: linear-gradient(#19274e, #536d88); }
+  background: linear-gradient(#19274e, #536d88);
+  position: relative;
+  padding-bottom: 7em;
+  min-height: 100vh; }
 
 h1 {
   font-family: "story"; }
@@ -161,6 +164,15 @@ ul {
   display: flex;
   justify-content: center;
   padding-bottom: 15px; }
+
+.footerdisco {
+  padding-top: 40px;
+  margin-top: 40px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 .redes-logos {
   padding: 10px; }

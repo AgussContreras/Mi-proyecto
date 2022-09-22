@@ -47,6 +47,9 @@ li{
 
 body {
     background: linear-gradient($color-2, $color-1);
+    position: relative;
+    padding-bottom: 7em;
+    min-height: 100vh;
 }
 
 h1{
@@ -219,7 +222,16 @@ ul{
     justify-content: center;
     padding-bottom: 15px;
 }
-
+.footerdisco{
+    padding-top: 40px;
+    margin-top: 40px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
 .redes-logos{
     padding: 10px;
 }
