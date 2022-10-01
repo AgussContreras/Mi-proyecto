@@ -52,6 +52,10 @@ body {
     min-height: 100vh;
 }
 
+.bodydisco{
+    padding-bottom: 9em;
+}
+
 h1{
     font-family: $font2;
 }
@@ -182,6 +186,11 @@ ul{
     padding: 10px;
 }
 
+.fotos-galeria1{
+    width: 500px;
+    padding: 10px;
+}
+
 .galeria {
     display: $dg;
     grid-template-columns: repeat(3, 500px);
@@ -271,6 +280,10 @@ $vista: mobile;
             width: 340px;
         }
 
+        .fotos-galeria1{
+            width: 340px;
+        }
+
     }
 
 @if $vista == mobile {
@@ -323,6 +336,11 @@ $vista: mobile;
         .fotos-galeria {
             width: 250px;
         }
+
+        .fotos-galeria1{
+            width: 250px;
+        }
+
         p{
             font-size: 13px;
         }
@@ -358,9 +376,15 @@ $vista: mobile;
         .galeria {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 240px;
+            grid-template-rows: 320px; 
         }
         .fotos-galeria {
+            width: 480px;
+        }
+        
+        .fotos-galeria1{
+            padding-bottom: 40px;
+            margin-bottom: 40px;
             width: 480px;
         }
     }

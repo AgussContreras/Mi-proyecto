@@ -46,6 +46,9 @@ body {
   padding-bottom: 7em;
   min-height: 100vh; }
 
+.bodydisco {
+  padding-bottom: 9em; }
+
 h1 {
   font-family: "story"; }
 
@@ -131,6 +134,10 @@ ul {
   width: 500px;
   padding: 10px; }
 
+.fotos-galeria1 {
+  width: 500px;
+  padding: 10px; }
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(3, 500px);
@@ -200,6 +207,8 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 280px; }
   .fotos-galeria {
+    width: 340px; }
+  .fotos-galeria1 {
     width: 340px; } }
 
 @media (max-width: 848px) {
@@ -238,6 +247,8 @@ footer {
     background: linear-gradient(#19274e, #536d88); }
   .fotos-galeria {
     width: 250px; }
+  .fotos-galeria1 {
+    width: 250px; }
   p {
     font-size: 13px; } }
 
@@ -262,6 +273,10 @@ footer {
   .galeria {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 240px; }
+    grid-template-rows: 320px; }
   .fotos-galeria {
+    width: 480px; }
+  .fotos-galeria1 {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
     width: 480px; } }
